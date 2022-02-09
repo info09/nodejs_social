@@ -27,8 +27,11 @@ class App {
   }
 
   private connectToDatabase() {
-    const connectString =
-      "mongodb://admin:Admin%40123@localhost:27017/nodejs_social?authSource=admin";
+    const connectString = process.env.MONGODB_URI;
+    if (!connectString) {
+      console.log("ConnectString is invalid");
+      return;
+    }
     try {
       mongoose.connect(connectString);
       console.log("Database connected...");
