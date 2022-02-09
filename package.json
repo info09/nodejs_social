@@ -1,0 +1,8 @@
+{
+  "name": "nodejs_social",
+  "version": "1.0.0",
+  "description": "social network",
+  "main": "src/server.ts",
+  "author": "HuyTQ",
+  "license": "MIT"
+}
